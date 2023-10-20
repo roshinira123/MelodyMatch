@@ -1,5 +1,5 @@
 
-# \<Melody Match (Song Recommender)\>
+# Melody Match (Song Recommender)
 
  
   > Authors: [Roshini Rangarajan](https://github.com/roshinira123), [Alison Ordentlich](https://github.com/aorde0012), [Darren Liang](https://github.com/DarrenLiang27), [Aheli Banerjee](https://github.com/abane029)
