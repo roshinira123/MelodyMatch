@@ -9,17 +9,6 @@
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project) We plan to use C++, as it is the language we are the most knowledgeable about; GoogleTest, so we can have a testing suite to make sure our code works; Git, so we have a platform onto which we can update our project code files and utilize its Kanban Board; VSCode, which we will write our code in; and Spotify Web API, which has music resources we can develop and implement in our project to create necessary features.
  > * What will be the input/output of your project? We will have a terminal-based output for our project to display on, and in this terminal, the user will be able to enter their favorite song and genres. They can also enter their mood. After this, the user could get an output for a list of potential songs that interest them and find new songs for them. Another input that the user could provide would be what songs they want to put in a playlist. The output could have all the songs in the playlist sorted.
  > * What are the features that the project provides? The project will be able to provide a song based on various user input, such as mood, genre, or favorite song. The project then outputs a list of potential songs that could interest the user based on a recommendation algorithm. The list of songs is able to be sorted based on dates, alphabetical order, and other factors.
- > ## Phase II
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` (aka Sprint Backlog) column.
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. You need to pick both time slots on Tuesday of week 6. The check-ins will occur on Zoom. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
 ## User Interface Specification
  > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
