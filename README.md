@@ -10,22 +10,13 @@ Authors: [Roshini Rangarajan](https://github.com/roshinira123), [Alison Ordentli
  * What will be the input/output of your project? We will have a terminal-based output for our project to display on, and in this terminal, the user will be able to enter their favorite song and genres. They can also enter their mood. After this, the user could get an output for a list of potential songs that interest them and find new songs for them. Another input that the user could provide would be what songs they want to put in a playlist. The output could have all the songs in the playlist sorted.
  * What are the features that the project provides? The project will be able to provide a song based on various user input, such as mood, genre, or favorite song. The project then outputs a list of potential songs that could interest the user based on a recommendation algorithm. The list of songs is able to be sorted based on dates, alphabetical order, and other factors.
 ## User Interface Specification
-Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
-
 ### Navigation Diagram
-Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
-This link below leads to our navigation diagram.
-[https://docs.google.com/drawings/d/1t8GAoP3Ue_nv5nOI42U4MJISZal-oNpl5GkK1_ed4FM/edit?usp=sharing](url)
+[MelodyMatch Navigation Diagram Link](https://docs.google.com/drawings/d/1t8GAoP3Ue_nv5nOI42U4MJISZal-oNpl5GkK1_ed4FM/edit?usp=sharing)
 ### Screen Layouts
-Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+[MelodyMatch Screen Layouts](https://docs.google.com/drawings/d/1vzC25bUxK5S8vNFX0lVm7eplWVOZ3qmMt8TS7b1oqx8/edit?usp=sharing)
+### Class Diagram
+[MelodyMatch Class Diagram - UML](https://docs.google.com/drawings/d/1l127Xw_brDTnTlyY3EZbkfmGljcVwQB_l-BOVf8va3o/edit?usp=sharing)
 
-This link below leads to our screen layouts.
-[https://docs.google.com/drawings/d/1vzC25bUxK5S8vNFX0lVm7eplWVOZ3qmMt8TS7b1oqx8/edit?usp=sharing](url)
-## Class Diagram
-Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
-
-This is our class diagrams and the description is within the diagram.
-[https://docs.google.com/drawings/d/1l127Xw_brDTnTlyY3EZbkfmGljcVwQB_l-BOVf8va3o/edit?usp=sharing](url)
 ## Phase III
 You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
  
