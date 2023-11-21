@@ -7,7 +7,7 @@ loginAuth::loginAuth() {
 }
 
 //Parametrized Constructor
-loginAuth::loginAuth(std::string user, std::string pass) {
+loginAuth::loginAuth(const std::string & user, const std::string & pass){
     username = user;
     password = pass;
     isCorrectUser = false;
@@ -17,9 +17,9 @@ bool loginAuth::checkUser() {
     //Pull user data from Spotify API?
 
     //temp check 
-    if(username == spotifyUser && password == spotifyPass){
+    if(username == "spotifyUser" && password == "spotifyPass"){
         setBoolUser(true);
-    }else if {
+    }else{
         setBoolUser(false);
     }
     return getBoolUser();
@@ -48,11 +48,11 @@ bool loginAuth::getBoolUser() const{
 
 
 //temporary login msg 
-void printLoginSuccess(){
+void loginAuth::printLoginSuccess(){
     if(isCorrectUser == true)
     {
-        cout << "You have successfully logged in!" << endl;
+        std::cout << "You have successfully logged in!" << std::endl;
     }else{
-        cout << "Fail. Please enter username and password again.";
+        std::cout << "Fail. Please enter username and password again.";
     }
 }

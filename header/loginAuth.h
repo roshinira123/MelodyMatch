@@ -2,12 +2,13 @@
 #define LOGINAUTH_H
 
 #include <iostream>
+#include <string>
 
 class loginAuth{
     //private vars
     private:
     std::string password;
-    std::username;
+    std::string username;
     bool isCorrectUser;
 
     public:
@@ -15,7 +16,7 @@ class loginAuth{
     loginAuth();
 
     //Parameter Constructor
-    loginAuth(const std::string & user, const std::string & pass)
+    loginAuth(const std::string & user, const std::string & pass);
 
     //authentication
     bool checkUser();
@@ -28,7 +29,8 @@ class loginAuth{
     /*SETTERS*/
     void setBoolUser(bool check);
 
-    /*Display MSG*/
+    /*Display MSG*/ 
+    void printLoginSuccess();
 
 };
 
