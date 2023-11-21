@@ -1,5 +1,5 @@
-#ifndef SONG_H
-#define SONG_H
+#ifndef LOGINAUTH_H
+#define LOGINAUTH_H
 
 #include <iostream>
 
@@ -29,7 +29,7 @@ class loginAuth{
     void setBoolUser(bool check);
 
     /*Display MSG*/
-    
+
 };
 
 #endif
