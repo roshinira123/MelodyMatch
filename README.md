@@ -17,8 +17,7 @@ Authors: [Roshini Rangarajan](https://github.com/roshinira123), [Alison Ordentli
 ### Screen Layouts
 [Screen Layout MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/assets/53918739/b934cf3e-cf75-4d49-ac91-e33bb19ac051)
 
-## Phase III
-### Solid Principles Applied:
+## Phase III - SOLID Principles
 #### The Single Responsibility Principle: 
 Throughout the program, we use this principle because some of the classes have one thing that they focus on and therefore there is only one thing to change. This can be seen in the SongsDataFilter(), SongsDataManager(), and Song() classes. These classes focus on one purpose whether that be storing Song information or managing the songs in vectors. This is also applied in the LoginAuth() class, where its sole responsibility is just logging in users. This principle helped us focus our different issues into different classes, and help abstract our work so we can better work on different parts together. 
 
