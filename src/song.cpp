@@ -8,7 +8,7 @@ Song::Song(string t, string g, string m, string a, string tId, double dF, double
     genre = g;
     mood = m;
     artist = a;
-    trackID = tID; 
+    trackID = tId; 
     danceabilityFactor = dF; 
     energyFactor = eF; 
     livenessFactor = lF; 
