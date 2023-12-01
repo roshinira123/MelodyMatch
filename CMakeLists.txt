@@ -5,14 +5,14 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(parseSongData
     src/song.cpp
-    src/SongsDataManager.cpp 
+    src/songsDataManager.cpp 
     main.cpp
 )
 
 ADD_EXECUTABLE(runAllTests
     test/test.cpp 
     src/song.cpp
-    src/SongsDataManager.cpp 
+    src/songsDataManager.cpp 
 )
 
 TARGET_LINK_LIBRARIES(runAllTests gtest)

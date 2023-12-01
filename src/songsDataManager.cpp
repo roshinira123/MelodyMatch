@@ -2,11 +2,11 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
-#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/SongsDataManager.h"
+#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
 
 using namespace std;
 
-void SongsDataManager::GetData(const std::string& filename) {
+void songsDataManager::GetData(const std::string& filename) {
     ifstream file(filename);
     if (!file.is_open()) {
         cout << "Error opening file: " << filename << endl;
@@ -31,7 +31,7 @@ void SongsDataManager::GetData(const std::string& filename) {
 
             iss >> danceability >> energy >> liveness;
             //Create a new Song object and add it to the ListOfSongs vector
-            Song newSong(title, genre, "", artist, trackID, danceability, energy, liveness);
+            Song newSong(title, genre, "[TEMP BLANK]", artist, trackID, danceability, energy, liveness);
             ListOfSongs.push_back(newSong);
         } else {
             cout << "Error parsing line: " << line << endl;
@@ -41,6 +41,6 @@ void SongsDataManager::GetData(const std::string& filename) {
     file.close();
 }
 
-vector<Song> SongsDataManager::getSongs() const {
+vector<Song> songsDataManager::getSongs() const {
     return ListOfSongs;
 }

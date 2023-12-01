@@ -1,9 +1,9 @@
-#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/SongsDataManager.h"
+#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
 #include <vector>
 
 
 int main() {
-    SongsDataManager s;
+    songsDataManager s;
     s.GetData("/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/Data/SpotifyFeatures - SpotifyFeatures.csv");
 
     vector<Song> songs = s.getSongs();

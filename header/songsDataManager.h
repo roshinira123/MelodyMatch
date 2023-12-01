@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class SongsDataManager {
+class songsDataManager {
 private:
     vector<Song> ListOfSongs;
 

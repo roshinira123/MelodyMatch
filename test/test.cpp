@@ -1,11 +1,11 @@
 #include <gtest/gtest.h>
-#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/SongsDataManager.h"
+#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
 
 using namespace std;
 
 //Test if parsing is successful
 TEST(SongDataTest, SuccessfulParsing) {
-    SongsDataManager s;
+    songsDataManager s;
     s.GetData("/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> songs = s.getSongs();
 
@@ -17,7 +17,7 @@ TEST(SongDataTest, SuccessfulParsing) {
 
 //Test for invalid file path
 TEST(SongDataTest, InvalidFilePath) {
-    SongsDataManager s;
+    songsDataManager s;
 
     s.GetData("blahblahblah.csv");
 
