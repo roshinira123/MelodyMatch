@@ -1,12 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
-
+project(MelodyMatch)
 # Add the googletest subdirectory
 ADD_SUBDIRECTORY(googletest)
-
-# Define your test executables with unique names
-ADD_EXECUTABLE(songTest
-    unitTestSong/songTest.cpp
-)
 
 ADD_EXECUTABLE(userTest
     unitTestSong/userTest.cpp
@@ -22,10 +17,9 @@ ADD_EXECUTABLE(loginAuthTest
 )
 
 # Link the test executables with the gtest library
-TARGET_LINK_LIBRARIES(songTest gtest)
 TARGET_LINK_LIBRARIES(userTest gtest)
 TARGET_LINK_LIBRARIES(loginAuthTest gtest)
 
 # Optionally, disable pthreads for gtest (if needed)
-TARGET_COMPILE_DEFINITIONS(songTest PRIVATE gtest_disable_pthreads=ON)
 TARGET_COMPILE_DEFINITIONS(userTest PRIVATE gtest_disable_pthreads=ON)
+TARGET_COMPILE_DEFINITIONS(loginAuthTest PRIVATE gtest_disable_pthreads=ON)
