@@ -7,18 +7,25 @@
 
 class songsDataFilter
 {
+
 private:
-    std::vector<std::string> songsByGenre;
-    std::vector<std::string> songsByGenre;
-    std::vector<std::string> songsByMood;
-    std::vector<std::string> songsByArtist;
-    std::vector<std::string> personalizedSongs;
+
+    string genre;
+    string mood;
+    string artist;
+    string title;
+    string newSong;
+
+    vector<string> genres;
+    vector<string> moods;
+    vector<string> artists;
+    vector<string> titles;
 
 public:
-
-    void getSongsByGenre(std::vector<std::string> songsByGenre) {};
-    void getSongsByMood(std::vector<std::string> songsByMood) {};
-    void getSongsByArtist(std::vector<std::string> songsByArtist) {};
+    songsDataFilter() {};
+    void addSongsByGenre(vector<string> &songsByGenre, vector<string> songsTitles, vector<string> &personalizedSongs, string genre) {};
+    void addSongsByArtist(vector<string> &songsByArtist, vector<string> songsTitles, vector<string> &personalizedSongs, string artist) {};
+    void addSongsByMood(vector<string> &songsByEnergy, vector<string> songsTitles, vector<string> &personalizedSongs, string mood) {};
 };
 
 #endif
