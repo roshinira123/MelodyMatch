@@ -74,7 +74,8 @@ const User& userList::getUser(const std::string &username) const {
         }
     }
     // User not found, throw an exception
-    throw std::out_of_range("User not found");
+    static User emptyUser;
+    return emptyUser;
 }
 
 bool userList::userExists(const std::string &username) const {
