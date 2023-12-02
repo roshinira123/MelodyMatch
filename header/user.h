@@ -26,6 +26,8 @@
 
 //Code Smells are warning signs
 
+//Refactor before adding new features
+
 class User{
     //private vars
     private:
@@ -64,11 +66,14 @@ class userList{
 
     void removeUser(const std::string &username);
 
+    const User& getUser(const std::string &username) const;
+
     bool userExists(const std::string &username) const;
 
     void displayAllUsers() const;
 
     int getUserCount() const;
+
 };
 
 #endif

@@ -37,8 +37,9 @@ TEST(userTest,addUser){
     User user1("Roshini","RR");
 
     list1.addUser(user1);
+    User user2 = list1.getUser("Roshini");
      // Verify that the user is in the list
-    EXPECT_TRUE(list1.userExists(user1.getUsername()));
+    EXPECT_TRUE(user2.getUsername() == (user1.getUsername()));
 }
 
 int main(int argc, char **argv) {

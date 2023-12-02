@@ -67,7 +67,16 @@ void userList::removeUser(const std::string &username) {
     }
 }
 
-//Check if a User Exists in the List
+const User& userList::getUser(const std::string &username) const {
+    for (const auto &user : list) {
+        if (user.getUsername() == username) {
+            return user;  // User found, return the User object by reference
+        }
+    }
+    // User not found, throw an exception
+    throw std::out_of_range("User not found");
+}
+
 bool userList::userExists(const std::string &username) const {
    for (auto &user : list) {
         if (user.getUsername() == username) {
@@ -76,7 +85,6 @@ bool userList::userExists(const std::string &username) const {
     }
     return false;  // User not found
 }
-
 //Display All Users in the List
 void userList::displayAllUsers() const {
     for (auto &user : list) {
@@ -88,4 +96,3 @@ void userList::displayAllUsers() const {
 int userList::getUserCount() const {
     return static_cast<int>(list.size());
 }
-
