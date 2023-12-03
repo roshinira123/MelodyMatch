@@ -2,7 +2,7 @@
 #include <sstream>
 #include <vector>
 #include <iostream>
-#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
+#include "../header/songsDataManager.h"
 
 using namespace std;
 
@@ -22,25 +22,37 @@ void songsDataManager::GetData(const std::string& filename) {
         }
         istringstream iss(line);
         string genre, artist, title, trackID;
+        string tempTitle;
         double danceability, energy, liveness;
 
-        if (getline(iss, genre, ',') &&
-            getline(iss, artist, ',') &&
-            getline(iss, title, ',') &&
-            getline(iss, trackID, ',')) {
-
-            iss >> danceability >> energy >> liveness;
-            //Create a new Song object and add it to the ListOfSongs vector
-            Song newSong(title, genre, "[TEMP BLANK]", artist, trackID, danceability, energy, liveness);
-            ListOfSongs.push_back(newSong);
-        } else {
-            cout << "Error parsing line: " << line << endl;
+        getline(iss, genre, ',');
+        getline(iss, artist, ',');
+        if (iss.peek() == '"') {
+            iss.ignore();
+            getline(iss, title, '"');
+            while (iss.peek() == '"') {
+                title += '"';
+                iss.ignore(); 
+                getline(iss, tempTitle, '"');
+                title += tempTitle;
+            }
+            if (iss.peek() == ',') {
+                iss.ignore();
+            }
         }
+        else {
+            getline(iss, title, ',');
+        }
+        iss >> danceability >> energy >> liveness;
+        //Create a new Song object and add it to the ListOfSongs vector
+        Song newSong(title, genre, "BLANK", artist, trackID, danceability, energy, liveness);
+        ListOfSongs.push_back(newSong);        
     }
-
     file.close();
 }
 
 vector<Song> songsDataManager::getSongs() const {
     return ListOfSongs;
 }
+
+
