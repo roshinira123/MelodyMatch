@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-class songsDataFilter
+class songsDataFilter: public songsDataManager
 {
 
 private:
