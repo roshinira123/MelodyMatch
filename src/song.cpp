@@ -19,6 +19,10 @@ void Song::changeRecommendation() {
     hasBeenRecommended = !hasBeenRecommended;
 }
 
+<<<<<<< HEAD
+=======
+//Maybe
+>>>>>>> 2d624f9fa5c3e1bc62bc5ebfdcf7516092c0a61d
 void Song::displayDetails() {
     cout << "Title: " << title << ", Genre: " << genre
         << ", Mood: " << mood << ", Artist: " << artist
