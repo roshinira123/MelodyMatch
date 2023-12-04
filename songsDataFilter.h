@@ -4,28 +4,23 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../header/song.h"
+#include "../header/songsDataManager.h"
 
 class songsDataFilter: public songsDataManager
 {
-
 private:
-
-    string genre;
-    string mood;
-    string artist;
-    string title;
-    string newSong;
-
-    vector<string> genres;
-    vector<string> moods;
-    vector<string> artists;
-    vector<string> titles;
+    vector<Song> SongsByGenre;
+    vector<Song> SongsByArtist;
+    vector<Song> SongsByMood;
+    vector<Song> personalizedSongs;
 
 public:
     songsDataFilter() {};
-    void addSongsByGenre(vector<string> &songsByGenre, vector<string> songsTitles, vector<string> &personalizedSongs, string genre) {};
-    void addSongsByArtist(vector<string> &songsByArtist, vector<string> songsTitles, vector<string> &personalizedSongs, string artist) {};
-    void addSongsByMood(vector<string> &songsByEnergy, vector<string> songsTitles, vector<string> &personalizedSongs, string mood) {};
+    void getSongsByGenre(const string &genre);
+    void getSongsByArtist(const string &artist);
+    void getSongsByMood(const string &mood);
+    vector<Song> personalizedSongList();
 };
 
 #endif

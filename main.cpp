@@ -1,9 +1,12 @@
 #include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
 #include <vector>
+#include <iostream>
+#include <string>
 
+using namespace std;
 
 int main() {
-    songsDataManager s;
+    songsDataFilter s;
     s.GetData("/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/Data/SpotifyFeatures - SpotifyFeatures.csv");
 
     vector<Song> songs = s.getSongs();
@@ -11,6 +14,13 @@ int main() {
     for (int i = 0; i < 140; i++) {
         songs.at(i).displayDetails();
     }
+
+    cout << endl;
+
+    s.getSongsByGenre("Movie");
+    s.getSongsByArtist("Henri Salvador");
+    s.getSongsByMood("happy");
+    cout << s.personalizedSongList() << endl;
 
     return 0;
 }

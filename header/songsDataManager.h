@@ -8,8 +8,9 @@
 
 using namespace std;
 
-class songsDataManager {
-private:
+class songsDataManager
+{
+protected:
     vector<Song> ListOfSongs;
 
 public:
