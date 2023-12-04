@@ -23,7 +23,7 @@ ADD_EXECUTABLE(parseSongData
 )
 
 ADD_EXECUTABLE(runAllTests
-    test/test.cpp 
+    test/songtest.cpp 
     src/song.cpp
     src/songsDataManager.cpp 
 )
@@ -35,3 +35,5 @@ TARGET_LINK_LIBRARIES(loginAuthTest gtest)
 # Optionally, disable pthreads for gtest (if needed)
 TARGET_COMPILE_DEFINITIONS(userTest PRIVATE gtest_disable_pthreads=ON)
 TARGET_COMPILE_DEFINITIONS(loginAuthTest PRIVATE gtest_disable_pthreads=ON)
+TARGET_LINK_LIBRARIES(runAllTests gtest)
+TARGET_COMPILE_DEFINITIONS(runAllTests PRIVATE gtest_disable_pthreads=ON)
