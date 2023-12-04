@@ -1,21 +1,18 @@
-#include <iostream>
-#include <string>
+#include "/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/header/songsDataManager.h"
 #include <vector>
-#include "mainMenu.h"
+
 
 int main() {
-    mainMenu mm;
+    songsDataManager s;
+    s.GetData("/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/Data/SpotifyFeatures - SpotifyFeatures.csv");
 
-    mm.setGenres({"Pop", "Rock", "Jazz", "Blues"});
-    mm.setMoods({"Upbeat", "Romantic", "Melancholic", "Angry"});
-    mm.setArtists({"Artist 1", "Artist 2", "Artist 3", "Artist 4"});
+    vector<Song> songs = s.getSongs();
 
-    mm.getGenres();
-    mm.getMoods();
-    mm.getArtists();
+    for (int i = 0; i < 140; i++) {
+        songs.at(i).displayDetails();
+    }
 
-    mm.suggestMusic();
+    //songs.at(132).displayDetails();
 
     return 0;
 }
-
