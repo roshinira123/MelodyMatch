@@ -6,7 +6,7 @@ ADD_SUBDIRECTORY(googletest)
 ADD_EXECUTABLE(parseSongData
     src/song.cpp
     src/songsDataManager.cpp 
-    main.cpp
+    songDatamain.cpp
 )
 
 ADD_EXECUTABLE(runAllTests
