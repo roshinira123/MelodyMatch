@@ -17,6 +17,7 @@ private:
 
 public:
     songsDataFilter() {};
+    ~songsDataFilter();
     void getSongsByGenre(const string &genre);
     void getSongsByArtist(const string &artist);
     void getSongsByMood(const string &mood);

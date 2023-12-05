@@ -1,4 +1,11 @@
-#include "songsDataFilter.h"
+#include "header/songsDataFilter.h"
+
+songsDataFilter::~songsDataFilter() {
+    SongsByGenre.clear();
+    SongsByArtist.clear();
+    SongsByMood.clear();
+    personalizedSongs.clear();
+}
 
 void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs from user's genre and add them to songsByGenre vector
 {
