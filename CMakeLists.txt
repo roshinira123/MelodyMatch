@@ -4,13 +4,13 @@ project(MelodyMatch)
 ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(userTest
-    unitTestSong/userTest.cpp
+    test/userTest.cpp
     # Add the source file(s) containing the User class implementation
     src/user.cpp
 )
 
 ADD_EXECUTABLE(loginAuthTest
-    unitTestSong/loginAuthTest.cpp
+    test/loginAuthTest.cpp
     # Add the source file(s) containing the User class implementation
     src/loginAuth.cpp
     src/user.cpp
@@ -26,6 +26,15 @@ ADD_EXECUTABLE(runAllTests
     test/songtest.cpp 
     src/song.cpp
     src/songsDataManager.cpp 
+)
+
+ADD_EXECUTABLE(runMelodyMatch
+    src/mainMenu.h
+    src/mainMenumain.cpp
+    src/song.cpp
+    src/songsDataFilter.cpp
+    src/songsDataManager.cpp
+
 )
 
 # Link the test executables with the gtest library
