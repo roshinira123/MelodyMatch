@@ -1,12 +1,13 @@
 #include <gtest/gtest.h>
 #include "../header/songsDataManager.h"
+#include "../header/song.h"
 
 using namespace std;
 
 //Test if parsing is successful
 TEST(SongDataTest, SuccessfulParsing) {
     songsDataManager s;
-    s.GetData("/home/csmajs/aorde001/final-project-rrang020-abane029-dlian032-aorde001/Data/SpotifyFeatures - SpotifyFeatures.csv");
+    s.GetData("../Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> songs = s.getSongs();
 
     ASSERT_FALSE(songs.empty()); // Ensure the list is not empty

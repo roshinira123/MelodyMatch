@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include "../header/songsDataManager.h"
+#include "../header/song.h"
 
 using namespace std;
 
