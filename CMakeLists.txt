@@ -10,6 +10,14 @@ ADD_EXECUTABLE(runFilter
     mainFilter.cpp
 )
 
+ADD_EXECUTABLE(MelodyMatch
+    src/songsDataFilter.cpp
+    src/songsDataManager.cpp 
+    src/song.cpp
+    src/mainMenu.cpp
+)
+
+
 ADD_EXECUTABLE(parseSongData
     src/song.cpp
     src/songsDataManager.cpp 

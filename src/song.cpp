@@ -21,7 +21,7 @@ void Song::changeRecommendation() {
 void Song::displayDetails() {
     cout << "Title: " << title << ", Genre: " << genre
         << ", Mood: " << getMood() << ", Artist: " << artist
-        << " URL:https://open.spotify.com/track/ " <<trackID <<endl;
+        << " URL:https://open.spotify.com/track/" <<trackID <<endl;
 }
 
 string Song::getTitle() {

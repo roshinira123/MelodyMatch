@@ -44,6 +44,7 @@ void songsDataManager::GetData(const std::string& filename) {
         else {
             getline(iss, title, ',');
         }
+        getline(iss, trackID, ',');
         iss >> danceability >> energy >> liveness;
         //Create a new Song object and add it to the ListOfSongs vector
         Song newSong(title, genre, artist, trackID, danceability, energy, liveness);
