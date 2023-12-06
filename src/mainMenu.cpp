@@ -62,7 +62,7 @@ int main() {
                 std::cin >> artist;
 
 
-                std::cout << "Enter the mood (energetic, happy, tired, sad): ";
+                std::cout << "Enter the mood (energetic, happy, tired, sad, wildcard[IF you want some fun!] ): ";
                 std::cin >> mood;
 
 
