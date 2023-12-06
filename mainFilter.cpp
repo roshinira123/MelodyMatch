@@ -15,14 +15,14 @@ int main() {
     //vector<Song> songs = s.getSongs();
 
    
-    dataFilter.getSongsByGenre("Pop");
-    dataFilter.getSongsByArtist("Adele");
-    dataFilter.getSongsByMood("sad");
+    dataFilter.getSongsByGenre("R&B");
+    dataFilter.getSongsByArtist("Joji");
+    dataFilter.getSongsByMood("happy");
 
     vector<Song> personalizedList = dataFilter.personalizedSongList();
 
    
-     for (auto &song : personalizedList) {
+    for (auto &song : personalizedList) {
         song.displayDetails();
     }
 

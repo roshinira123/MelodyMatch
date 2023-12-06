@@ -63,7 +63,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (mood == "energetic" && dbSongs.at(i).getEnergyFactor() >= 0.8 && dbSongs.at(i).getEnergyFactor() <= 1.0)
+        if (mood == "energetic" )
         {
             
             ++moodCount;
@@ -74,7 +74,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
                 break;
             }
         }
-        else if (mood == "happy" && dbSongs.at(i).getEnergyFactor() >= 0.5 && dbSongs.at(i).getEnergyFactor() < 0.8)
+        else if (mood == "happy" )
         {
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
@@ -84,7 +84,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
                 break;
             }
         }
-        else if (mood == "tired" && dbSongs.at(i).getEnergyFactor() >= 0.2 && dbSongs.at(i).getEnergyFactor() < 0.5)
+        else if (mood == "tired" )
         {
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
@@ -94,7 +94,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
                 break;
             }
         }
-        else if (mood == "sad" && dbSongs.at(i).getEnergyFactor() >= 0 && dbSongs.at(i).getEnergyFactor() < 0.2)
+        else if (mood == "sad" )
         {
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
