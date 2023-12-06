@@ -82,7 +82,37 @@ int main() {
                 exitProgram = true;
                 break;
             case 1: {
-                menu.personalizeSongs();
+                std::string genre, artist, mood;
+               
+                // Get user input for genre, artist, and mood
+                std::cout << "Enter the genre: ";
+                std::cin >> genre;
+
+
+                std::cout << "Enter the artist: ";
+                std::cin >> artist;
+
+
+                std::cout << "Enter the mood (energetic, happy, tired, sad, wildcard[IF you want some fun!] ): ";
+                std::cin >> mood;
+
+
+                // Filter songs based on user's choices
+                dataFilter.getSongsByGenre(genre);
+                dataFilter.getSongsByArtist(artist);
+                dataFilter.getSongsByMood(mood);
+
+
+                // Get personalized song list based on user choices
+                std::vector<Song> personalizedSongs = dataFilter.personalizedSongList();
+               
+                // Display the personalized song list to the user
+                std::cout << "Your personalized song list:" << std::endl;
+                for (const auto &song : personalizedSongs) {
+                    // Display song details (e.g., song name, artist, etc.)
+                }
+                // Clear options for the next iteration
+                dataFilter.~songsDataFilter();
                 break;
             }
 

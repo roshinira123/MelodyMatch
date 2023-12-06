@@ -7,7 +7,7 @@ using namespace std;
 //Test if parsing is successful
 TEST(SongDataTest, SuccessfulParsing) {
     songsDataManager s;
-    s.GetData("../Data/SpotifyFeatures - SpotifyFeatures.csv");
+    s.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> songs = s.getSongs();
 
     ASSERT_FALSE(songs.empty()); // Ensure the list is not empty
