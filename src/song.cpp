@@ -23,6 +23,7 @@ void Song::displayDetails() {
     cout << "Title: " << title << ", Genre: " << genre
         << ", Mood: " << mood << ", Artist: " << artist
         << ", Recommended: " << (hasBeenRecommended ? "Yes" : "No") << endl;
+    //cout<<"URL: " <<"https://open.spotify.com/track/" + trackID<<endl;
 }
 
 string Song::getTitle() {

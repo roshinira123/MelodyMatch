@@ -3,6 +3,13 @@ project(SongData)
 
 ADD_SUBDIRECTORY(googletest)
 
+ADD_EXECUTABLE(runFilter
+    src/songsDataFilter.cpp
+    src/songsDataManager.cpp 
+    src/song.cpp
+    mainFilter.cpp
+)
+
 ADD_EXECUTABLE(parseSongData
     src/song.cpp
     src/songsDataManager.cpp 
