@@ -133,3 +133,9 @@ vector<Song> songsDataFilter :: personalizedSongList()
 
     return personalizedSongs;
 } 
+void songsDataFilter::clear() {
+    SongsByGenre.clear();
+    SongsByArtist.clear();
+    SongsByMood.clear();
+}
+

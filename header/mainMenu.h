@@ -13,11 +13,9 @@ private:
    
 public:
     mainMenu();
-
-
     void displayMainMenu();
     void displayMusicOptions();
-   
+    void personalizeSongs();
    
 };
 

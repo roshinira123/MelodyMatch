@@ -20,7 +20,9 @@ public:
     void getSongsByGenre(const string &genre);
     void getSongsByArtist(const string &artist);
     void getSongsByMood(const string &mood);
+    void clear();
     vector<Song> personalizedSongList();
+     
 };
 
 #endif
