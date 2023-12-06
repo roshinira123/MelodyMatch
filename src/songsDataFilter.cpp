@@ -65,6 +65,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
     {
         if (mood == "energetic" && dbSongs.at(i).getEnergyFactor() >= 0.8 && dbSongs.at(i).getEnergyFactor() <= 1.0)
         {
+            
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
 
@@ -103,9 +104,19 @@ void songsDataFilter :: getSongsByMood(const string &mood)
                 break;
             }
         }
-        else
-        {
+        else if(mood == "wildcard"){
+            ++moodCount;
+            SongsByMood.push_back(dbSongs.at(i));
+
+            if (moodCount == 5) // SongsByMood now has 5 songs from a sad mood's energy range
+            {
+                break;
+            }
+
+
+        }else{
             cout << "There are no songs available for that mood." << endl;
+            break;
         }
     }
 }

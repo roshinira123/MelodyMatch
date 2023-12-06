@@ -15,11 +15,9 @@ int main() {
     //vector<Song> songs = s.getSongs();
 
    
-    dataFilter.getSongsByGenre("Movie");
-  
-   
-    dataFilter.getSongsByArtist("Henri Salvador");
-    //dataFilter.getSongsByMood("happy");
+    dataFilter.getSongsByGenre("Pop");
+    dataFilter.getSongsByArtist("Adele");
+    dataFilter.getSongsByMood("sad");
 
     vector<Song> personalizedList = dataFilter.personalizedSongList();
 

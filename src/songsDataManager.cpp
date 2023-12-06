@@ -46,7 +46,7 @@ void songsDataManager::GetData(const std::string& filename) {
         }
         iss >> danceability >> energy >> liveness;
         //Create a new Song object and add it to the ListOfSongs vector
-        Song newSong(title, genre, "BLANK", artist, trackID, danceability, energy, liveness);
+        Song newSong(title, genre, artist, trackID, danceability, energy, liveness);
         ListOfSongs.push_back(newSong);        
     }
     file.close();

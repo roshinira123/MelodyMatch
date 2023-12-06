@@ -20,12 +20,13 @@ class Song {
     bool hasBeenRecommended;
 
  public:
-    Song(string t, string g, string m, string a, string tId, double dF, double eF, double lF); //Changed constructor
+    Song(string t, string g, string a, string tId, double dF, double eF, double lF); //Changed constructor
     void changeRecommendation();
     void displayDetails();
     string getTitle();
     string getGenre();
     string getMood();
+   // void setMood(string m)
     string getArtist();
 
    //Added additional features based on .csv file
