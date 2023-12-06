@@ -16,9 +16,18 @@ ADD_EXECUTABLE(loginAuthTest
     src/user.cpp
 )
 
+ADD_EXECUTABLE(mainLoginTest
+    unitTestSong/mainLogin.cpp
+    # Add the source file(s) containing the User class implementation
+    src/loginAuth.cpp
+    src/user.cpp
+)
+
+
 # Link the test executables with the gtest library
 TARGET_LINK_LIBRARIES(userTest gtest)
 TARGET_LINK_LIBRARIES(loginAuthTest gtest)
+TARGET_LINK_LIBRARIES(mainTest gtest)
 
 # Optionally, disable pthreads for gtest (if needed)
 TARGET_COMPILE_DEFINITIONS(userTest PRIVATE gtest_disable_pthreads=ON)
