@@ -10,18 +10,16 @@ mainMenu::mainMenu(){
 
 }
 
-void mainMenu::displayMainMenu(){
-    cout<<"Welcome to Melody Match!"<<endl;
-
-}
-
 
 void mainMenu::displayMusicOptions() {
     // Display music-related options for the user
-    cout << "Choose an option:" << endl;
-    cout << "0 - Quit" << endl;
+    cout<<endl;
+    cout << "Welcome to Melody Match!!!"<<endl;
+    cout << "Choose an option (either 0 or 1):" << endl;
     cout << "1 - Get personalized song list" << endl;
-    
+    cout << "0 - Quit" << endl;
+    cout<<endl;
+   
    
 }
 
@@ -30,16 +28,19 @@ void mainMenu::personalizeSongs(){
     string genre, artist, mood;
                
         // Get user input for genre, artist, and mood
-        cout << "Enter the genre: ";
+        cout<<"Please type out your exact genre choice from this list:"<<endl;
+        cout<<"Movie, R&B, A Capella, Country, Alternative, Country, Dance, Hip-Hop, Pop, Folk, Rap, Ska, Soul" <<endl;
+        cout <<"Enter the genre: ";
         cin >> genre;
 
+         cout<<"Please type out your favorite artist some examples to try are: Adele, Joji, RCKB"<<endl;
         cout << "Enter the artist: ";
         cin >> artist;
 
         cout << "Enter the mood (energetic, happy, tired, sad, wildcard[IF you want some fun!] ): ";
         cin >> mood;
 
-
+        cout<<endl;
         // Filter songs based on user's choices
         dataFilter.getSongsByGenre(genre);
         dataFilter.getSongsByArtist(artist);
@@ -50,10 +51,21 @@ void mainMenu::personalizeSongs(){
         vector<Song> personalizedSongs = dataFilter.personalizedSongList();
                
         // Display the personalized song list to the user
-        cout << "Your personalized song list:" << endl;
+        cout<<endl;
+        cout << "Here is your personalized song list:" << endl;
+       
+        int counter = 1;
         for (auto &song : personalizedSongs) {
+                cout<<counter<<". ";
                 song.displayDetails();
+                counter++;
         }
+        cout<<endl;
+        cout<<"Now add your favorites to your Spotify playlists using the URL link "<<endl;
+        cout<<"Note: The list size will vary based on inputs"<<endl;
+        cout<<"Feel free to create a new lists of songs, the possibilities are endless!"<<endl;
+        cout<<endl;
+
 
         dataFilter.clear();
 
@@ -69,7 +81,7 @@ int main() {
 
 
     while (!exitProgram) {
-        menu.displayMainMenu();
+       // menu.displayMainMenu();
         menu.displayMusicOptions();
 
 
@@ -79,6 +91,7 @@ int main() {
 
         switch (choice) {
             case 0:
+                cout<<"Thank you for using Melody Match! Have a fun with your new songs!"<<endl;
                 exitProgram = true;
                 break;
             case 1: {
