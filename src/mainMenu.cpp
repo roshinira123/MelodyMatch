@@ -83,6 +83,7 @@ int main() {
                 break;
             case 1: {
                 menu.personalizeSongs();
+                break;
             }
 
             default:
