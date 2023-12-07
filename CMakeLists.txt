@@ -1,4 +1,5 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+set(CMAKE_BUILD_TYPE Debug)
 project(MelodyMatch)
 
 ADD_SUBDIRECTORY(googletest)

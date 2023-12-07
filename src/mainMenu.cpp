@@ -31,16 +31,18 @@ void mainMenu::personalizeSongs(){
         cout<<"Please type out your exact genre choice from this list:"<<endl;
         cout<<"Movie, R&B, A Capella, Country, Alternative, Country, Dance, Hip-Hop, Pop, Folk, Rap, Ska, Soul" <<endl;
         cout <<"Enter the genre: ";
-        cin >> genre;
 
-         cout<<"Please type out your favorite artist some examples to try are: Adele, Joji, RCKB"<<endl;
+        getline(cin, genre);
+
+        cout<<"Please type out your favorite artist some examples to try are: Adele, Joji, Britney Spears"<<endl;
         cout << "Enter the artist: ";
-        cin >> artist;
+
+        getline(cin, artist);
 
         cout << "Enter the mood (energetic, happy, tired, sad, wildcard[IF you want some fun!] ): ";
-        cin >> mood;
 
-        cout<<endl;
+        getline(cin, mood);
+
         // Filter songs based on user's choices
         dataFilter.getSongsByGenre(genre);
         dataFilter.getSongsByArtist(artist);
@@ -77,7 +79,7 @@ int main() {
 
 
     bool exitProgram = false;
-    int choice;
+    string choice;
 
 
     while (!exitProgram) {
@@ -86,22 +88,19 @@ int main() {
 
 
         cout << "Enter your choice (0 to exit): ";
-        cin >> choice;
+        getline(cin, choice);
 
 
-        switch (choice) {
-            case 0:
-                cout<<"Thank you for using Melody Match! Have a fun with your new songs!"<<endl;
-                exitProgram = true;
-                break;
-            case 1: {
-                menu.personalizeSongs();
-                break;
-            }
+        if (choice == "0") {
+            cout<<"Thank you for using Melody Match! Have fun with your new songs!"<<endl;
+            exitProgram = true;
+        }
+        else if (choice == "1") {
+            menu.personalizeSongs();
+        }
 
-            default:
+        else {
                 cout << "Invalid choice. Please try again." << endl;
-                break;
         }
     }
 
