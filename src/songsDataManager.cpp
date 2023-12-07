@@ -71,7 +71,8 @@ void songsDataManager::GetData(const std::string& filename) {
             danceability = stod(danceabilityStr);
             energy = stod(energyStr);
             liveness = stod(livenessStr);
-        } catch (const invalid_argument& error) {
+        } 
+        catch (const invalid_argument& error) {
             cout << "Error converting string to double: " << error.what() << " " << line;
             return;
         }
