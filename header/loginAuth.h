@@ -24,7 +24,7 @@ class loginAuth{
     loginAuth(const std::string & user, const std::string & pass);
 
     //authentication
-    bool checkUser(const std::string & username);
+    bool checkUser(const std::string & inputUsername,const std::string & inputPassword);
 
     /*GETTERS*/
     std::string getUsername() const;

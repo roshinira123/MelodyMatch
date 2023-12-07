@@ -5,6 +5,7 @@ loginAuth::loginAuth() {
     username = "";
     password = "";
     isCorrectUser = false;
+    list1.addUser(User("", "")); // Add a default user to the list
 }
 
 //Parametrized Constructor
@@ -15,16 +16,18 @@ loginAuth::loginAuth(const std::string & user, const std::string & pass){
 }
 
 //Authentication
-bool loginAuth::checkUser(const std::string & username) {
-        User user1 = list1.getUser(username);
+bool loginAuth::checkUser(const std::string & inputUsername,const std::string & inputPassword) {
+        User user1 = list1.getUser(inputUsername);
 
-        if (user1.getUsername() == username && user1.getPassword() == password) {
+        if (user1.getUsername() == inputUsername && user1.getPassword() == inputPassword) {
+            std::cout << "Debug: Authentication successful" << std::endl;
             setBoolUser(true);
-            printLoginSuccess();
+            // printLoginSuccess();
             return true; // Authentication successful
         }else{
             setBoolUser(false);
-            printLoginSuccess();
+            std::cout << "Debug: Authentication failed" << std::endl;
+            // printLoginSuccess();
             return false; // Authentication failed
         }
 }
