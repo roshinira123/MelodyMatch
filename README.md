@@ -60,4 +60,9 @@ We also applied this principle, because many of these classes are easily open to
   Running the executable ```./MelodyMatch``` will begin the music recommending software. 
  ## Testing
   How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+
+ ## ValGrind Screenshots
+
+ ### loginAuth Test
+ ![LoginAuthTest Valgrind Screenshot](Valgrind%20Screenshots/LoginAuthTest%20valgrind.png)
+
