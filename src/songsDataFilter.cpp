@@ -63,60 +63,15 @@ void songsDataFilter :: getSongsByMood(const string &mood)
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (mood == "energetic" )
-        {
-            
-            ++moodCount;
-            SongsByMood.push_back(dbSongs.at(i));
-
-            if (moodCount == 5) // SongsByMood now has 5 songs from an energetic mood's energy range
-            {
-                break;
-            }
-        }
-        else if (mood == "happy" )
+        if (dbSongs.at(i).getMood() == (mood))
         {
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
 
-            if (moodCount == 5) // SongsByMood now has 5 songs from a happy mood's energy range
+            if (moodCount == 5)
             {
                 break;
             }
-        }
-        else if (mood == "tired" )
-        {
-            ++moodCount;
-            SongsByMood.push_back(dbSongs.at(i));
-
-            if (moodCount == 5) // SongsByMood now has 5 songs from a tired mood's energy range
-            {
-                break;
-            }
-        }
-        else if (mood == "sad" )
-        {
-            ++moodCount;
-            SongsByMood.push_back(dbSongs.at(i));
-
-            if (moodCount == 5) // SongsByMood now has 5 songs from a sad mood's energy range
-            {
-                break;
-            }
-        }
-        else if(mood == "wildcard"){
-            ++moodCount;
-            SongsByMood.push_back(dbSongs.at(i));
-
-            if (moodCount == 5) // SongsByMood now has 5 songs from a sad mood's energy range
-            {
-                break;
-            }
-
-
-        }else{
-            cout << "There are no songs available for that mood." << endl;
-            break;
         }
     }
 }
