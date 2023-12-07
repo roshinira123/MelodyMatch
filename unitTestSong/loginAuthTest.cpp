@@ -3,14 +3,14 @@
 #include "gtest/gtest.h"
 
 
-// Test LoginAuth class
+//Test LoginAuth class
 TEST(LoginAuthTest, CheckUser) {
  
 
     loginAuth login("AO", "AO");
     login.setNewUser("AO","AO");
 
-    EXPECT_TRUE(login.checkUser("AO"));
+    EXPECT_TRUE(login.checkUser("AO","AO"));
 }
 
 TEST(LoginAuthTest, FalseUser) {
@@ -18,7 +18,7 @@ TEST(LoginAuthTest, FalseUser) {
     loginAuth login("Roshini", "RR");
     login.setNewUser("Roshini","RR");
 
-    EXPECT_FALSE(login.checkUser("Darren"));
+    EXPECT_FALSE(login.checkUser("Darren","hi"));
 }
 
 TEST(LoginAuthTest,AddUsers){
@@ -29,9 +29,8 @@ TEST(LoginAuthTest,AddUsers){
     log.setNewUser("Aheli","AB");
     log.setNewUser("Ali","A");
 
-    EXPECT_TRUE(log.checkUser("DarrenL"));
-
-     EXPECT_FALSE(log.checkUser("Aheli"));
+    EXPECT_TRUE(log.checkUser("DarrenL","Darn"));
+     EXPECT_FALSE(log.checkUser("Aheli","hi"));
 }
 
 int main(int argc, char **argv) {
