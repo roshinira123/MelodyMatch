@@ -7,3 +7,6 @@ runAllTests
 runFilter
 MelodyMatch
 lib/
+songTest
+userTest
+loginAuthTest
