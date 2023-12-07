@@ -34,7 +34,30 @@ We also applied this principle, because many of these classes are easily open to
  ## Screenshots
   Screenshots of the input/output after running your application
  ## Installation/Usage
-  Instructions on installing and running your application
+  Using git, clone the repository, and ```cd``` into it.
+```
+  git clone https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001.git
+```
+```
+  cd final-project-rrang020-abane029-dlian032-aorde001
+```
+
+
+  Our project utilizes ```cmake``` and ```make``` to create the executables to run our project. Assuming the necessary extensions are installed, enter the following commands to create the excecutables:
+
+```
+  cmake .
+```
+```
+  make
+```
+  The executable:
+```
+  ./MelodyMatch
+```
+  will be created.
+
+  Running the executable ```./MelodyMatch``` will begin the music recommending software. 
  ## Testing
   How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
