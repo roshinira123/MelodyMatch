@@ -7,18 +7,22 @@
 #include "../header/song.h"
 #include "../header/songsDataFilter.h"
 
+// Key:  /***/ at the end of a line means it was newly added
+
 void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs from user's genre and add them to songsByGenre vector
 {
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
 
+    bool songOfGenreFound = true; /***/
     int genreCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (dbSongs.at(i).getGenre()== genre)
+        if (dbSongs.at(i).getGenre() == genre)
         {
+            songOfGenreFound = true; /***/
             ++genreCount;
             SongsByGenre.push_back(dbSongs.at(i));
 
@@ -27,7 +31,17 @@ void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs fr
                 break;
             }
         }
+        else /***/
+        {
+            songOfGenreFound = false; /***/
+        } /***/
     }
+
+    if (songOfGenreFound == false) /***/
+    {
+        cout << endl; /***/
+        cout << "We could not generate songs for the genre " << "\"" << genre << ".\"" << endl; /***/
+    } /***/
 }
 
 void songsDataFilter :: getSongsByArtist(const string &artist) //select 5 songs from user's artist and add them to songsByArtist vector
@@ -36,12 +50,14 @@ void songsDataFilter :: getSongsByArtist(const string &artist) //select 5 songs 
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
 
+    bool songOfArtistFound = true; /***/
     int artistCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
         if (dbSongs.at(i).getArtist() == artist)
         {
+            songOfArtistFound = true; /***/
             ++artistCount;
             SongsByArtist.push_back(dbSongs.at(i));
 
@@ -50,7 +66,16 @@ void songsDataFilter :: getSongsByArtist(const string &artist) //select 5 songs 
                 break;
             }
         }
+        else /***/
+        {
+            songOfArtistFound = false; /***/
+        } /***/
     }
+
+    if (songOfArtistFound == false) /***/
+    {
+        cout << "We could not generate songs from the artist " << "\"" << artist << ".\"" << endl; /***/
+    } /***/
 }
 
 void songsDataFilter :: getSongsByMood(const string &mood)
@@ -59,12 +84,14 @@ void songsDataFilter :: getSongsByMood(const string &mood)
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
 
+    bool songOfMoodFound = true; /***/
     int moodCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (dbSongs.at(i).getMood() == (mood))
+        if (dbSongs.at(i).getMood() == mood)
         {
+            songOfMoodFound = true; /***/
             ++moodCount;
             SongsByMood.push_back(dbSongs.at(i));
 
@@ -73,7 +100,16 @@ void songsDataFilter :: getSongsByMood(const string &mood)
                 break;
             }
         }
+        else /***/
+        {
+            songOfMoodFound = false; /***/
+        } /***/
     }
+
+    if (songOfMoodFound == false) /***/
+    {
+        cout << "We could not generate songs for the mood " << "\"" << mood << ".\"" << endl; /***/
+    } /***/
 }
 
 vector<Song> songsDataFilter :: personalizedSongList()

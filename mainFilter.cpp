@@ -11,17 +11,22 @@ int main() {
 
     songsDataManager dataManager; 
     dataManager.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
+
+    //vector<Song> songs = s.getSongs();
+
    
     dataFilter.getSongsByGenre("R&B");
     dataFilter.getSongsByArtist("Joji");
     dataFilter.getSongsByMood("happy");
 
     vector<Song> personalizedList = dataFilter.personalizedSongList();
+
    
-    for (auto &song : personalizedList)
-    {
+    for (auto &song : personalizedList) {
         song.displayDetails();
     }
+
+   
 
     return 0;
 }

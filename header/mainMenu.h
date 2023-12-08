@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 #include "../header/songsDataFilter.h"
+#include "../header/loginAuth.h"
+
 
 
 class mainMenu {
@@ -16,7 +18,7 @@ public:
     void displayMainMenu();
     void displayMusicOptions();
     void personalizeSongs();
-   
+    void LoginHandler();
 };
 
 

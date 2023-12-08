@@ -9,11 +9,5 @@ int main() {
 
     vector<Song> songs = s.getSongs();
 
-    for (int i = 0; i < 140; i++) {
-        songs.at(i).displayDetails();
-    }
-
-    //songs.at(132).displayDetails();
-
     return 0;
 }
