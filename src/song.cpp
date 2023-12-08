@@ -20,7 +20,7 @@ void Song::changeRecommendation() {
 
 void Song::displayDetails() {
     cout<<title<<" by: "<<artist<<endl;
-    cout<< "  URL:https://open.spotify.com/track/" <<trackID <<endl;
+    cout<< "   URL:https://open.spotify.com/track/" <<trackID <<endl;
     
     /*
     cout << "Title: " << title << ", Genre: " << genre
