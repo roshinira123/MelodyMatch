@@ -1,43 +1,44 @@
+#include <iostream>
 #include "../header/user.h"
 #include "../header/loginAuth.h"
 
-#include <string>
-#include <iostream>
 using namespace std;
 
-int main()
-{
-    //User input 
-    string username;
-    string password;
-    char choice;
-    //boolean
-    bool check;
+int main() {
+    loginAuth authSystem;
+    string inputUsername, inputPassword;
+    authSystem.setNewUser("Roshini", "hi");
+    
+     cout << "Do you have an account? (yes/no): ";
+    string hasAccount;
+    cin >> hasAccount;
 
-    cout << "Hi, Please enter username:";
-    cin >> username;
-    cout << "Now enter your password:";
-    cin >> password;
+    if (hasAccount == "yes") {
+        cout << "Enter your username: ";
+        cin >> inputUsername;
+        cout << "Enter your password: ";
+        cin >> inputPassword;
 
-    //object
-    loginAuth loginInfo;
-    loginInfo.setNewUser("Roshini","R");
+        if (authSystem.checkUser(inputUsername,inputPassword) == true) {
+            authSystem.printLoginSuccess();
+        } else {
+            cout << "Failed to log in. Please try again or create a new account." << endl;
+        }
+    } else if (hasAccount == "no") {
+        cout << "Create a new account" << endl;
+        cout << "Enter a username: ";
+        cin >> inputUsername;
+        cout << "Enter a password: ";
+        cin >> inputPassword;
 
-    check = loginInfo.checkUser(username);
-    if(check == false){
-        cout << "Are you a new user(Y|N)?"<< endl;
-        cin >> choice;
-        if(choice == 'Y'){
-            cout << "Enter a username to create a new account:";
-            cin >> username;
-            cin >> password;
-            loginInfo.setNewUser(username,password);
-            cout << "Checking username in list";
-            loginInfo.checkUser(username);
-        }else{
-           loginInfo.printLoginSuccess();
-        }       
-    }else{
-           loginInfo.printLoginSuccess();
+        authSystem.setNewUser(inputUsername, inputPassword);
+        cout << "New account created! You can now log in." << endl;
+    } else {
+        cout << "Invalid input. Please type 'yes' or 'no'." << endl;
     }
+
+    return 0;
+  
 }
+
+ 
