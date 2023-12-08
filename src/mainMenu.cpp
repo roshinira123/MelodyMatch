@@ -63,6 +63,7 @@ void mainMenu::personalizeSongs(){
                 cout<<counter<<". ";
                 song.displayDetails();
                 counter++;
+                cout<<endl;
         }
         cout<<endl;
         cout<<"Now add your favorites to your Spotify playlists using the URL link "<<endl;
@@ -86,14 +87,14 @@ void mainMenu::LoginHandler(){
         cout<<endl;
         cout << "Do you have an account? (yes/no): ";
         string hasAccount;
-        cin >> hasAccount;
+        getline(cin,hasAccount);
         cout<<endl;
 
         if (hasAccount == "yes") {
             cout << "Enter your username: ";
-            cin >> inputUsername;
+            getline(cin,inputUsername);
             cout << "Enter your password: ";
-            cin >> inputPassword;
+            getline(cin,inputPassword);
 
             if (authSystem.checkUser(inputUsername, inputPassword)) {
                 authSystem.printLoginSuccess();
@@ -105,9 +106,9 @@ void mainMenu::LoginHandler(){
         } else if (hasAccount == "no") {
             cout << "Create a new account" << endl;
             cout << "Enter a username: ";
-            cin >> inputUsername;
+            getline(cin,inputUsername);
             cout << "Enter a password: ";
-            cin >> inputPassword;
+            getline(cin,inputPassword);
 
             authSystem.setNewUser(inputUsername, inputPassword);
             cout << "New account created! You can now log in." << endl;
@@ -126,9 +127,10 @@ int main() {
     //Login stuff 
     cout<<"Welcome to Melody Match Login"<<endl;
     cout<<"Please login to start falling in love with new music."<<endl;
-    cout<<endl;
+   
     
     menu.LoginHandler();
+    cout<<endl;
    
     bool exitProgram = false;
     string choice;
@@ -147,7 +149,6 @@ int main() {
         else if (choice == "1") {
             menu.personalizeSongs();
         }
-
         else {
                 cout << "Invalid choice. Please try again." << endl;
         }
