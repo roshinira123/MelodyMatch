@@ -11,11 +11,11 @@ Authors: [Roshini Rangarajan](https://github.com/roshinira123), [Alison Ordentli
  * What are the features that the project provides? The project will be able to provide a song based on various user input, such as mood, genre, or favorite song. The project then outputs a list of potential songs that could interest the user based on a recommendation algorithm. The list of songs is able to be sorted based on dates, alphabetical order, and other factors.
 ## User Interface Specification
 ### UML Class Diagram
-![UML Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/assets/147006942/03f6efb4-6e5b-4e56-846f-f9f55f607e2d)
+![UML Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/UML_MelodyMatch.png)
 ### Navigation Diagram
-[Navigation Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/assets/53918739/ed5895a8-e965-4477-990f-956b2b0c3479)
+[Navigation Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/NavigationDiagram_MelodyMatch.png)
 ### Screen Layouts
-[Screen Layout MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/assets/53918739/b934cf3e-cf75-4d49-ac91-e33bb19ac051)
+[Screen Layout MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/ScreenLayout_MelodyMatch.png)
 
 ## Phase III - SOLID Principles
 #### The Single Responsibility Principle: 
@@ -31,8 +31,15 @@ We also applied this principle, because many of these classes are easily open to
   * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
   * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
- ## Screenshots
-  Screenshots of the input/output after running your application
+## Screenshots
+* [Login Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/LoginScreenshot.png)
+* [Presaved Login Output](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PresavedLoginOutput.png)
+* [Failed Login Output Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/FailedLoginOutputScreenshot.png) 
+* [Personalized Song List Output #1](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_1.png)
+* [Personalized Song List Output #2 with Exit](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_2.png)
+   
+  
+  
  ## Installation/Usage
   Using git, clone the repository, and ```cd``` into it.
 ```
