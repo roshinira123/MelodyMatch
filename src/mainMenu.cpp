@@ -34,7 +34,7 @@ void mainMenu::personalizeSongs(){
 
         getline(cin, genre);
 
-        cout << "Please type out your favorite artist (for example, Adele, Joji, Britney Spears):"<<endl;
+        cout << "Please type out your favorite artist (for example, Adele, Joji, Britney Spears):"<<endl; /***/
         cout << "Enter the artist: ";
 
         getline(cin, artist);

@@ -57,7 +57,8 @@ ADD_EXECUTABLE(parseSongData
 ADD_EXECUTABLE(runAllTests
     test/test.cpp 
     src/song.cpp
-    src/songsDataManager.cpp 
+    src/songsDataManager.cpp
+    src/songsDataFilter.cpp
 )
 
 TARGET_LINK_LIBRARIES(MelodyMatch gtest)

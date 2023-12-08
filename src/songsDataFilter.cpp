@@ -7,7 +7,7 @@
 #include "../header/song.h"
 #include "../header/songsDataFilter.h"
 
-// Key:  /***/ at the end of a line means it was newly added
+//  /***/ at the end of a line means line was newly added
 
 void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs from user's genre and add them to songsByGenre vector
 {
