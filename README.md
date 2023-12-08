@@ -32,11 +32,11 @@ We also applied this principle, because many of these classes are easily open to
   * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
 ## Screenshots
-* [Login Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/LoginScreenshot.png)
-* [Presaved Login Output](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PresavedLoginOutput.png)
-* [Failed Login Output Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/FailedLoginOutputScreenshot.png) 
-* [Personalized Song List Output #1](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PersonalizedSongListOutput_1.png)
-* [Personalized Song List Output #2 with Exit](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PersonalizedSongListOutput_2.png)
+* [Login Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/LoginScreenshot.png)
+* [Presaved Login Output](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PresavedLoginOutput.png)
+* [Failed Login Output Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/FailedLoginOutputScreenshot.png) 
+* [Personalized Song List Output #1](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_1.png)
+* [Personalized Song List Output #2 with Exit](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_2.png)
    
   
   
