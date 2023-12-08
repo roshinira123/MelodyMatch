@@ -66,8 +66,13 @@ We also applied this principle, because many of these classes are easily open to
 
   Running the executable ```./MelodyMatch``` will begin the music recommending software. 
  ## Testing / Valgrind
-  How was your project tested/validated? 
-
+  How was your project tested/validated? After following the instructions in the Installation/Usage section to generate the executables, we ran the test executables made for each component and used valgrind --leak-check=full ./MelodyMatch and valgrind --leak-check=full on the login tests executables and the song manager executable.
+<details>
+<summary>Valgrind Screenshots</summary>
+<img src = "https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Valgrind%20Screenshots/LoginAuthTest%20valgrind.png" width="500">
+<img src = "https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Valgrind%20Screenshots/ValgrindSS2.png" width="500" >
+ 
+</details>
  
 
 
