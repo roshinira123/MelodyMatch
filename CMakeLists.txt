@@ -33,13 +33,6 @@ TARGET_COMPILE_DEFINITIONS(loginAuthTest PRIVATE gtest_disable_pthreads=ON)
 project(SongData)
 set(CMAKE_BUILD_TYPE Debug)
 
-ADD_EXECUTABLE(runFilter
-    src/songsDataFilter.cpp
-    src/songsDataManager.cpp 
-    src/song.cpp
-    mainFilter.cpp
-)
-
 ADD_EXECUTABLE(MelodyMatch
     src/songsDataFilter.cpp
     src/songsDataManager.cpp 
@@ -48,12 +41,6 @@ ADD_EXECUTABLE(MelodyMatch
     src/song.cpp
     src/main.cpp
     src/mainMenu.cpp
-)
-
-ADD_EXECUTABLE(parseSongData
-    src/song.cpp
-    src/songsDataManager.cpp 
-    songDatamain.cpp
 )
 
 ADD_EXECUTABLE(runAllTests
