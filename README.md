@@ -31,8 +31,15 @@ We also applied this principle, because many of these classes are easily open to
   * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
   * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
- ## Screenshots
-  Screenshots of the input/output after running your application
+## Screenshots
+* [Login Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/LoginScreenshot.png)
+* [Presaved Login Output](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PresavedLoginOutput.png)
+* [Failed Login Output Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/FailedLoginOutputScreenshot.png) 
+* [Personalized Song List Output #1](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PersonalizedSongListOutput_1.png)
+* [Personalized Song List Output #2 with Exit](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/PersonalizedSongListOutput_2.png)
+   
+  
+  
  ## Installation/Usage
   Using git, clone the repository, and ```cd``` into it.
 ```
