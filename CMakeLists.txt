@@ -31,6 +31,7 @@ TARGET_COMPILE_DEFINITIONS(loginAuthTest PRIVATE gtest_disable_pthreads=ON)
 # New Targets from the second CMakeLists.txt
 
 project(SongData)
+set(CMAKE_BUILD_TYPE Debug)
 
 ADD_EXECUTABLE(runFilter
     src/songsDataFilter.cpp
@@ -45,6 +46,7 @@ ADD_EXECUTABLE(MelodyMatch
     src/loginAuth.cpp
     src/user.cpp
     src/song.cpp
+    src/main.cpp
     src/mainMenu.cpp
 )
 
