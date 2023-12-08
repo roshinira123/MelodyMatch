@@ -1,7 +1,9 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <algorithm>
 #include <iostream>
+#include <random>
 #include <string>
 #include "../header/songsDataManager.h"
 #include "../header/song.h"
@@ -14,6 +16,7 @@ void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs fr
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
 
     bool songOfGenreFound = true; /***/
     int genreCount = 0;
@@ -49,6 +52,7 @@ void songsDataFilter :: getSongsByArtist(const string &artist) //select 5 songs 
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
 
     bool songOfArtistFound = true; /***/
     int artistCount = 0;
@@ -83,6 +87,7 @@ void songsDataFilter :: getSongsByMood(const string &mood)
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
 
     bool songOfMoodFound = true; /***/
     int moodCount = 0;
