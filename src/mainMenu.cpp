@@ -3,6 +3,7 @@
 #include <vector>
 #include "../header/mainMenu.h"
 #include "../header/songsDataFilter.h"
+#include "../header/loginAuth.h"
 using namespace std;
 
 
@@ -13,11 +14,12 @@ mainMenu::mainMenu(){
 
 void mainMenu::displayMusicOptions() {
     // Display music-related options for the user
-    cout<<endl;
+    cout<<"--------------------------------------------------"<<endl;
     cout << "Welcome to Melody Match!!!"<<endl;
     cout << "Choose an option (either 0 or 1):" << endl;
     cout << "1 - Get personalized song list" << endl;
     cout << "0 - Quit" << endl;
+    cout<<"--------------------------------------------------"<<endl;
     cout<<endl;
    
    
@@ -73,19 +75,66 @@ void mainMenu::personalizeSongs(){
 
 }
 
+void mainMenu::LoginHandler(){
+    loginAuth authSystem;
+    string inputUsername, inputPassword;
+    //Made a user just to load the system with someone
+    authSystem.setNewUser("Roshini", "hi");
+
+    bool exitLogin = false; 
+    while(!exitLogin){
+        cout<<endl;
+        cout << "Do you have an account? (yes/no): ";
+        string hasAccount;
+        cin >> hasAccount;
+        cout<<endl;
+
+        if (hasAccount == "yes") {
+            cout << "Enter your username: ";
+            cin >> inputUsername;
+            cout << "Enter your password: ";
+            cin >> inputPassword;
+
+            if (authSystem.checkUser(inputUsername, inputPassword)) {
+                authSystem.printLoginSuccess();
+                exitLogin = true; 
+
+            } else {
+                cout << "Failed to log in. Please try again or create a new account." << endl;
+            }
+        } else if (hasAccount == "no") {
+            cout << "Create a new account" << endl;
+            cout << "Enter a username: ";
+            cin >> inputUsername;
+            cout << "Enter a password: ";
+            cin >> inputPassword;
+
+            authSystem.setNewUser(inputUsername, inputPassword);
+            cout << "New account created! You can now log in." << endl;
+        } else {
+            cout << "Invalid input. Please type 'yes' or 'no'." << endl;
+        }
+    }
+    
+
+}
+
 
 int main() {
     mainMenu menu;
 
-
+    //Login stuff 
+    cout<<"Welcome to Melody Match Login"<<endl;
+    cout<<"Please login to start falling in love with new music."<<endl;
+    cout<<endl;
+    
+    menu.LoginHandler();
+   
     bool exitProgram = false;
     string choice;
-
-
     while (!exitProgram) {
        // menu.displayMainMenu();
         menu.displayMusicOptions();
-
 
         cout << "Enter your choice (0 to exit): ";
         getline(cin, choice);

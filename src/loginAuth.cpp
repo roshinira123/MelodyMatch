@@ -19,13 +19,13 @@ bool loginAuth::checkUser(const std::string & inputUsername,const std::string & 
         User user1 = list1.getUser(inputUsername);
 
         if (user1.getUsername() == inputUsername && user1.getPassword() == inputPassword) {
-            std::cout << "Debug: Authentication successful" << std::endl;
+            //std::cout << "Debug: Authentication successful" << std::endl;
             setBoolUser(true);
             // printLoginSuccess();
             return true; // Authentication successful
         }else{
             setBoolUser(false);
-            std::cout << "Debug: Authentication failed" << std::endl;
+            //std::cout << "Debug: Authentication failed" << std::endl;
             // printLoginSuccess();
             return false; // Authentication failed
         }
@@ -42,7 +42,7 @@ void loginAuth::setNewUser(const std::string &newUsername, const std::string &ne
     User newUser(newUsername, newPassword);
     list1.addUser(newUser);
 
-    std::cout << "New user created with username: " << newUsername << std::endl;
+    //std::cout << "New user created with username: " << newUsername << std::endl;
 }
 
 /*GETTERS*/

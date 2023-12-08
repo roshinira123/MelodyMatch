@@ -42,6 +42,8 @@ ADD_EXECUTABLE(runFilter
 ADD_EXECUTABLE(MelodyMatch
     src/songsDataFilter.cpp
     src/songsDataManager.cpp 
+    src/loginAuth.cpp
+    src/user.cpp
     src/song.cpp
     src/mainMenu.cpp
 )
@@ -58,5 +60,6 @@ ADD_EXECUTABLE(runAllTests
     src/songsDataManager.cpp 
 )
 
+TARGET_LINK_LIBRARIES(MelodyMatch gtest)
 TARGET_LINK_LIBRARIES(runAllTests gtest)
 TARGET_COMPILE_DEFINITIONS(runAllTests PRIVATE gtest_disable_pthreads=ON)
