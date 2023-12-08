@@ -1,0 +1,12 @@
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+parseSongData
+MelodyMatch
+lib/
+songTest
+userTest
+loginAuthTest
+mainLoginTest
+runAllTests
