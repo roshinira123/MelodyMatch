@@ -16,17 +16,18 @@ void songsDataFilter :: getSongsByGenre(const string &genre) //select 5 songs fr
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
-    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device()); /***/
 
     bool songOfGenreFound = true; /***/
     int genreCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (dbSongs.at(i).getGenre() == genre)
+        if (dbSongs.at(i).getGenre() == genre && dbSongs.at(i).getRecommendation() == false) /***/
         {
             songOfGenreFound = true; /***/
             ++genreCount;
+            dbSongs.at(i).changeRecommendation(); /***/ //song is now set to recommended
             SongsByGenre.push_back(dbSongs.at(i));
 
             if (genreCount == 5) // songsByGenre now has 5 songs from a specific genre
@@ -52,17 +53,18 @@ void songsDataFilter :: getSongsByArtist(const string &artist) //select 5 songs 
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
-    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device()); /***/
 
     bool songOfArtistFound = true; /***/
     int artistCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (dbSongs.at(i).getArtist() == artist)
+        if (dbSongs.at(i).getArtist() == artist && dbSongs.at(i).getRecommendation() == false) /***/
         {
             songOfArtistFound = true; /***/
             ++artistCount;
+            dbSongs.at(i).changeRecommendation(); /***/ //song is now set to recommended
             SongsByArtist.push_back(dbSongs.at(i));
 
             if (artistCount == 5) // songsByArtist now has 5 songs from a specific artist
@@ -87,20 +89,21 @@ void songsDataFilter :: getSongsByMood(const string &mood)
     songsDataManager sDM;
     sDM.GetData("Data/SpotifyFeatures - SpotifyFeatures.csv");
     vector<Song> dbSongs = sDM.getSongs();
-    shuffle(dbSongs.begin(), dbSongs.end(), random_device());
+    shuffle(dbSongs.begin(), dbSongs.end(), random_device()); /***/
 
     bool songOfMoodFound = true; /***/
     int moodCount = 0;
 
     for (int i = 0; i < dbSongs.size(); ++i)
     {
-        if (dbSongs.at(i).getMood() == mood)
+        if (dbSongs.at(i).getMood() == mood && dbSongs.at(i).getRecommendation() == false) /***/
         {
             songOfMoodFound = true; /***/
             ++moodCount;
+            dbSongs.at(i).changeRecommendation(); /***/ //song is now set to recommended
             SongsByMood.push_back(dbSongs.at(i));
 
-            if (moodCount == 5)
+            if (moodCount == 5) // songsByArtist now has 5 songs of a specific mood
             {
                 break;
             }
