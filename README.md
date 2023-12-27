@@ -11,11 +11,11 @@ Authors: [Roshini Rangarajan](https://github.com/roshinira123), [Alison Ordentli
  * What are the features that the project provides? The project will be able to provide a song based on various user input, such as mood, genre, or favorite song. The project then outputs a list of potential songs that could interest the user based on a recommendation algorithm. The list of songs is able to be sorted based on dates, alphabetical order, and other factors.
 ## User Interface Specification
 ### UML Class Diagram
-![UML Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/UML_MelodyMatch.png)
+![UML Diagram MelodyMatch](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/NEW%20UML%20-%20Melody%20Match.png)
 ### Navigation Diagram
-[Navigation Diagram MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/NavigationDiagram_MelodyMatch.png)
+[Navigation Diagram MelodyMatch](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/NewNaviagationDiagram.png)
 ### Screen Layouts
-[Screen Layout MelodyMatch](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/ScreenLayout_MelodyMatch.png)
+[Screen Layout MelodyMatch](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/NewScreenLayout.png)
 
 ## Phase III - SOLID Principles
 #### The Single Responsibility Principle: 
@@ -24,19 +24,13 @@ Throughout the program, we use this principle because some of the classes have o
 #### Open-Closed Principle: 
 We also applied this principle, because many of these classes are easily open to be extended but prevent modification. This can be seen in the SongDataFilter() class, this class can be extended to filter a range of different attributes other than genre, artist, and mood. It can be extended to maybe filter by the user's favorite decade of music released or by the user's favorite albums. However, it prevents modification because the class has one purpose which is to filter and output a personalized list of songs. This principle helps us by allowing us to be able to scale the project in the future or add more elements if time permits, without disrupting the functionality of the other classes. 
 
- ## Final deliverable
-  All group members will give a demo to the reader during lab time. You should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
-  Before the demo, you should do the following:
-  * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
-  * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
-  * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
 ## Screenshots
-* [Login Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/LoginScreenshot.png)
-* [Presaved Login Output](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PresavedLoginOutput.png)
-* [Failed Login Output Screenshot](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/FailedLoginOutputScreenshot.png) 
-* [Personalized Song List Output #1](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_1.png)
-* [Personalized Song List Output #2 with Exit](https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_2.png)
+* [Login Screenshot](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/Project_Screenshots/LoginScreenshot.png)
+* [Presaved Login Output](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/Project_Screenshots/PresavedLoginOutput.png)
+* [Failed Login Output Screenshot](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/Project_Screenshots/FailedLoginOutputScreenshot.png) 
+* [Personalized Song List Output #1](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_1.png)
+* [Personalized Song List Output #2 with Exit](https://github.com/roshinira123/MelodyMatch/blob/master/Design%20Documents/Project_Screenshots/PersonalizedSongListOutput_2.png)
    
   
   
@@ -69,13 +63,13 @@ We also applied this principle, because many of these classes are easily open to
   How was your project tested/validated? After following the instructions in the Installation/Usage section to generate the executables, we ran the test executables made for each component and used ```valgrind --leak-check=full ./MelodyMatch``` , ```valgrind --leak-check=full ./runAllTests``` , and did the same for other executables ( ```./userTest```, ```./loginAuthTest```, and ```./mainLoginTest``` ).
 <details>
 <summary>Tests Valgrind Screenshots</summary>
-<img src = "https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Valgrind%20Screenshots/LoginAuthTest%20valgrind.png" width="500">
-<img src = "https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Valgrind%20Screenshots/ValgrindSS3.png" width="500" >
+<img src = "https://github.com/roshinira123/MelodyMatch/blob/master/Valgrind%20Screenshots/ValgrindSS2.png" width="500">
+<img src = "https://github.com/roshinira123/MelodyMatch/blob/master/Valgrind%20Screenshots/ValgrindSS3.png" width="500" >
 </details>
 
 <details>
    <summary>MelodyMatch Valgrind Screenshots</summary>
-   <img src = "https://github.com/cs100/final-project-rrang020-abane029-dlian032-aorde001/blob/master/Valgrind%20Screenshots/MelodyMatchValgrindSS.png" width = "500">
+   <img src = "https://github.com/roshinira123/MelodyMatch/blob/master/Valgrind%20Screenshots/MelodyMatchValgrindSS.png" width = "500">
  </details>
  
 
